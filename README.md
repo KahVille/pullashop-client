@@ -34,6 +34,8 @@ With this client app of PullaShop you are able to do the following things:
 ### PullaShopApi
 - [.Net](https://dotnet.microsoft.com/) used by PullaShopApi to create an web api from which Pasterie information is gathered.
 
+Check out [development progress](https://github.com/KahVille/PullaShopApi) of the API.
+
 GraphQL is to be considered as an alternative for pasterie information
 
 ### Backend Database
