@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Products.module.css'
+import styles from '../../styles/Products.module.css'
 
-const Home: NextPage = () => {
+const Products: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,24 +13,31 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to PullaShop
+          Products
         </h1>
 
         <p className={styles.description}>
-          Get started by browsing the categories
+          Browse through products and choose your favoirite
         </p>
 
         <div className={styles.grid}>
           <a href="#" className={styles.card}>
-            <h2>Products</h2>
-            <p>Find all of the available pastries and drinks here</p>
-          </a>
-          
-          <a href="#" className={styles.card}>
-            <h2>About us</h2>
-            <p>Find more about PullaShop</p>
+            <h2>Pastries</h2>
+            <p>Find all of the available pastries</p>
           </a>
 
+          <a href="#" className={styles.card}>
+            <h2>Drinks</h2>
+            <p>Find all available Drinks here</p>
+          </a>
+
+          <a
+            href="#"
+            className={styles.card}
+          >
+            <h2>Combos &rarr;</h2>
+            <p>Find all combo's of pastries and drinks here</p>
+          </a>
         </div>
       </main>
 
@@ -47,4 +54,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Products
