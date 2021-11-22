@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../../../styles/Pastries.module.css'
+import ProductList from '../../../components/ProductList'
 
-const Pastries: NextPage = () => {
+const Pastries: NextPage = ({pastries}: any) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,9 +18,11 @@ const Pastries: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-         Look all of these Pastries we have! Choose your favourite!
+        Look all of these Pastries we have! Choose your favourite!
         </p>
 
+        <ProductList products={pastries}/>
+       
         {/* TODO: Fill list with pastries */}
         <div className={styles.grid}>
           <a href="#" className={styles.card}>
@@ -41,5 +44,32 @@ const Pastries: NextPage = () => {
     </div>
   )
 }
+
+// Pastries to display
+type Data = {
+  pastries: ProdutData[]
+  }
+
+// Pastrie details as ListItem  
+type ProdutData = {
+    id: number,
+    name: string,
+    avatar:string
+  }
+
+// Fetch Pastries from an api
+const getStaticProps = async () => {
+    const productApiUrl = 'Fill this temp api url in development'
+    const response = await fetch(`${productApiUrl}`);
+    const pastries = await response.json();
+
+    return {
+      props: {
+        pastries
+      } as Data
+    }
+  }
+  
+  export { getStaticProps };
 
 export default Pastries
