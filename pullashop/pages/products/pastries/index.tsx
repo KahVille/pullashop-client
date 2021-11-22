@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../../../styles/Pastries.module.css'
 import ProductList from '../../../components/ProductList'
+import { productApiUrl } from '../../../config'
 
 const Pastries: NextPage = ({pastries}: any) => {
   return (
@@ -59,7 +60,6 @@ type ProdutData = {
 
 // Fetch Pastries from an api
 const getStaticProps = async () => {
-    const productApiUrl = 'Fill this temp api url in development'
     const response = await fetch(`${productApiUrl}`);
     const pastries = await response.json();
 
