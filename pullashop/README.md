@@ -14,13 +14,19 @@ With this client app of PullaShop you are able to do the following things:
 
 ## Getting Started
 
-First, run the development server:
+Follow this guide to confugure  build and run the PullaShop client app on your local development environment
+
+1. Add .env.local file to the project rot folder
+
+Pass in the required variables. Contanct the developers of the PullaShop about the environment variables if needed for further assistance.
+
+2. Run the development server:
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
