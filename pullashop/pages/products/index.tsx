@@ -29,10 +29,12 @@ const Products: NextPage = () => {
           </a>
         </Link>
 
-          <a href="#" className={styles.card}>
+        <Link href="/products/drinks" as={`/products/drinks`}>
+          <a className={styles.card}>
             <h2>Drinks</h2>
             <p>Find all available Drinks here</p>
           </a>
+        </Link>
 
           <a
             href="#"
