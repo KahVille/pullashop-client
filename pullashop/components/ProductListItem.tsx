@@ -15,6 +15,7 @@ const ProductListItem = (props: Data) => {
     const productPath = props.productPath;
     
     return (
+        <div>
         <Link href={`${productPath}/[id]`} as={`${productPath}/${product.id}`}>
             <a>
                 <Image src='/kahvilleShopLogo.png' width="300" height="300" alt="Picture of the product" />
@@ -23,6 +24,7 @@ const ProductListItem = (props: Data) => {
                 <p>{product.name} is the best beacause it has lot&apos;s of fat and grease</p>
             </a>
         </Link>
+        </div>
     )
 }
 
