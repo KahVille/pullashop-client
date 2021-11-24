@@ -21,7 +21,7 @@ const Meta = (props:MetaData) => {
 
 Meta.defaultProps = {
     title: 'PullaShop',
-    description: 'The pullaShop of KahVille',
+    description: 'With Pullashop you can browse the best pastries and drinks',
     keywords: 'pasteries, shop, kahville'
 } as MetaData
 
