@@ -6,14 +6,16 @@ type Data = {
         id: number,
         name: string,
         avatar:string
-    }
+    },
+    productPath : string
 }
 
 const ProductListItem = (props: Data) => {
     const product = props.product;
-    // TODO: Fill the proper links for pastries
+    const productPath = props.productPath;
+    
     return (
-        <Link href="/product/[id]" as={`/product/${product.id}`}>
+        <Link href={`${productPath}/[id]`} as={`${productPath}/${product.id}`}>
             <a>
                 <Image src='/kahvilleShopLogo.png' width="300" height="300" alt="Picture of the product" />
                 <h3>

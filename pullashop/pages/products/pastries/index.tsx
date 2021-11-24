@@ -1,10 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import {useRouter} from 'next/router'
 import styles from '../../../styles/Pastries.module.css'
 import ProductList from '../../../components/ProductList'
 import { productApiUrl } from '../../../config'
 
+
 const Pastries: NextPage = ({pastries}: any) => {
+
+  const router = useRouter()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,31 +19,13 @@ const Pastries: NextPage = ({pastries}: any) => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Pastries
-        </h1>
-
-        <p className={styles.description}>
-        Look all of these Pastries we have! Choose your favourite!
-        </p>
-
-        <ProductList products={pastries}/>
-       
-        {/* TODO: Fill list with pastries */}
-        <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <h2>Ääkkös-pulla</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error adipisci alias explicabo vero repudiandae et deserunt consequuntur at soluta eius totam sunt provident voluptatibus laboriosam, debitis ipsa, repellat ipsum quo.</p>
-          </a>
-        </div>
+        <h1 className={styles.title}>Pastries</h1>
+        <p className={styles.description}>Look all of these Pastries we have! Choose your favourite!</p>       
+        <ProductList products={pastries} productsPath={router.pathname}/>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://kahville.github.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://kahville.github.io" target="_blank" rel="noopener noreferrer">
         &copy; 2021 - Ville Kähärä
         </a>
       </footer>
