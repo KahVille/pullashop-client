@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { productApiUrl } from "../../../config";
+import { productApiUrl, favouriteApiUrl} from "../../../config";
 
 const Pastry: NextPage = (props:any) => {
     return (
@@ -8,7 +8,7 @@ const Pastry: NextPage = (props:any) => {
         <h1>{props.product.name}</h1>
         <p>{props.product.price}</p>
         <Link href='/' >browse more products</Link>        
-        <button>Add to cart</button>
+        <button>Add to Favourites</button>
         </div>
     )
 }
