@@ -8,7 +8,7 @@ const Drink: NextPage = (props:any) => {
         <h1>{props.product.name} Drink</h1>
         <p>{props.product.price}</p>
         <Link href='/' >browse more products</Link>        
-        <button>Add to cart</button>
+        <button onClick= {() => addToFavourites(props.product)}>Add to Favourites</button>
         </div>
     )
 }
@@ -40,3 +40,10 @@ const getStaticPaths = async () => {
 export default Drink;
 
 export {getStaticPaths, getStaticProps}
+
+const addToFavourites = async (product: any) => {
+    const currentFavourites = JSON.parse(localStorage.getItem("favouriteList") || '[]');
+    const favourites = [...currentFavourites, product];
+    const updatedFavourites = JSON.stringify(favourites);
+    localStorage.setItem('favouriteList', updatedFavourites);
+}
