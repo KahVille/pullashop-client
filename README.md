@@ -11,11 +11,11 @@ Main branch contains the production ready build. Check out the development branc
 With this client app of PullaShop you are able to do the following things:
 
 ### Features that are the included in the minimum viable product:
-- Browse Pasteries by categories
-- Inspect Pasterie's details
-- Add Pasteries to List of Favourite pasteries from Pasterie details screen
-- Inspect pastries added to the favourite list
-- Localization for English and Finnish languages.
+- [x] Browse Pasteries by categories
+- [x] Inspect Pasterie's details
+- [x] Add Pasteries to List of Favourite pasteries from Pasterie details screen
+- [x] Inspect pastries added to the favourite list
+- [ ] Localization for English and Finnish languages.
 
 ### Planned Future improvements
 - Account and Account Details pages

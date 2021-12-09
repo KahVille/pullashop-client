@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import FavouriteListItem from "./FavouriteListItem";
 
 type ProdutData = {
     id: number,
     name: string,
-    avatar:string
+    count: number
 }
 
 const FavouriteList = () => {
@@ -17,11 +18,18 @@ const FavouriteList = () => {
         <div>
             <h2>Your Favourites</h2>
             {cartItems.map((product:ProdutData) => {
-                return < h1 key={product.id}> {product.name}</h1>
+                return <FavouriteListItem  key={product.id} product={product} RemoveItemFromFavourites={() => setFavourites(RemoveItem(product.id)) }/> 
             })}
         </div>
     )
 }
 
-
 export default FavouriteList;
+
+function RemoveItem(id: number): any {
+    console.log('removing item ' + id);
+    const data = JSON.parse(localStorage.getItem("favouriteList") || '[]') as ProdutData[]
+    const filteredData = data.filter(item => item.id !== id);
+    localStorage.setItem("favouriteList", JSON.stringify(filteredData))
+    return filteredData;
+}
