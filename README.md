@@ -7,7 +7,7 @@ With PullaShop you are able to buy the best pasteries from the top bakeries.
 ## Project status
 
 In an active development.
-Main branch contains the production ready build. Check out the development branch for current progress.
+Main branch contains the production ready build. This repositorty is to be converted into a hybrid of CI/CD and github workflow where every task will be issued and made into pull request that gets merged into a main branch.
 
 ## Planned Features
 
