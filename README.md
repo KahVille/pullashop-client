@@ -51,3 +51,7 @@ GraphQL is to be considered as an alternative for pasterie information
 - [MySQL](https://www.mysql.com/) used as the backend where pasterie information and favourites are stored
 
 Other possibilities for the backend solution are to be discussed. Options that are also viable are: MongoDB, SQLServer and Azure platform.
+
+### CMS
+
+CMS solutions are to be discussed.
